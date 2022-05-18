@@ -1,10 +1,111 @@
 {{template "base" .}}
+{{define "title"}}
+    Doggo Bookings Home
+{{end}}
 {{define "css"}}
     <link rel="stylesheet" href="../static/stylesheets/home.css" />
 {{end}}
 {{define "content"}}
-<div class="home_container">
-    <h1>This is the home page</h1>
-    <p>Welcome to the Hello World App...</p>
-</div>
+    <!-- START this content will be index/home template specific -->
+    <div class="container">
+        <section class="image-carousel">
+            <div class="img-container">
+                <img class="fade" src="../static/images/c1.webp" alt="a cute doggo wrapped in a blanket" />
+                <div>
+                    <h1>Doggo Bookings</h1>
+                    <p>Because it's not a getaway without a doggo</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="img-container">
+                <img class="fade" src="../static/images/c2.webp" alt="a golden retriever sleeping" />
+                <div>
+                    <h1>Comfy and Posh</h1>
+                    <p>We don't sacrifice elegance or comfort</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="img-container">
+                <img class="fade" src="../static/images/c3.webp" alt="a woman holding a mug with a dog at her feet" />
+                <div>
+                    <h1>Uniquely Beautiful</h1>
+                    <p>Every location is a stunningly exquisite experience</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="img-controls">
+                <span class="rect" data-position="1"></span>
+                <span class="rect" data-position="2"></span>
+                <span class="rect" data-position="3"></span>
+            </div>
+        </section>
+        <section class="intro">
+            <h2>Welcome to Doggo Bookings</h2>
+            <p>
+                Travelling with your pet can be stressful. Travelling without your
+                pet, well that's just not an option. At Doggo Bookings we wanted to
+                combine luxury, comfort, elegance, and fun - all with your treasured
+                family memeber in mind. We provide bookings to exclusive locations
+                around the globe. Additionally, we can enhance your stay with
+                pre-arranged activities that are sure to please both you and your
+                furry friends. Browse our rooms and make your reservations today!
+            </p>
+        </section>
+        <section class="offerings">
+            <h2>What sets us apart?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Fast. Reliable. Secure.</h3>
+                    <p>
+                        With Doggo Bookings your next holiday is only a few clicks away.
+                        Our booking system is fast because it should be simple to book
+                        your next great adventure. Our system is also built to be reliable
+                        and secure. Get the room and experience you want, without any
+                        worries over your privacy.
+                    </p>
+                    <button>Learn More</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Dogs. Dogs. More Dogs.</h3>
+                    <p>
+                        Your next holiday is a precious memory waiting to be made. Each
+                        Doggo Booking room is 100% pet friendly, and in fact, has been
+                        carefully created and decorated to give your four-legged family
+                        members the best possible experience. Doggo Bookings is committed
+                        to making sure both you and your pet won't ever want to leave!
+                    </p>
+                    <button>Make a Reservation</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Itinerary Assistance.</h3>
+                    <p>
+                        Planning pet appropriate special events or outings during your
+                        stay can be exhausting. Our expert booking coordinators can help
+                        you create a custom itinerary for both you and your furry friends.
+                        From pet friendly dining experiences to our rich pet inclusive
+                        spas, assistance plans are just a special email request away.
+                    </p>
+                    <button>Get in Touch</button>
+                </div>
+            </div>
+        </section>
+    </div>
+{{end}}
+    <!-- END this content will be index/home template specific -->
+{{define "js"}}
+    <script src="/static/js/home.js" type="module"></script>
+    <script>
+        const altImageTexts = {
+            c1: 'A cute pug wrapped up in a cozy blanket looking very cute',
+            c2: 'A sleepy golden retriever snuggled up on a cozy bed',
+            c3: 'A woman holding a large mug of hot chocolate with a lovely little puppy at her feet',
+        };
+        function setAltText() {
+            const images = document.querySelectorAll('img');
+            for (let i = 0; i < images.length; i++) {
+                images[i].setAttribute('alt', altImageTexts[images[i].name]);
+            }
+        }
+        setAltText();
+    </script>
 {{end}}

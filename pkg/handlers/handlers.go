@@ -41,3 +41,12 @@ func (e *Repository) About(w http.ResponseWriter, r *http.Request) {
 		},
 	)
 }
+func (e *Repository) Millies(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "millies-quarters.page.tmpl", &models.TemplateData{})
+}
+func (e *Repository) Blueberrys(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "blueberrys-suite.page.tmpl", &models.TemplateData{})
+}
+func (e *Repository) Muffins(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "muffins-retreat.page.tmpl", &models.TemplateData{})
+}

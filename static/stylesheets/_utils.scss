@@ -1,0 +1,148 @@
+@import './colors';
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin container {
+  margin-top: 50px;
+}
+@mixin navbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  font-family: 'Rubik', sans-serif;
+  > div:first-child {
+    > a:first-child {
+      > img {
+        height: 50px;
+      }
+    }
+  }
+  > ul {
+    display: flex;
+    margin: 0;
+    > li {
+      list-style: none;
+      color: white;
+      cursor: pointer;
+      > a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    > li:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  background-color: black;
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+    > a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  #dropdown-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 175px;
+    padding: 15px;
+    left: -30px;
+    display: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    > ul {
+      list-style: none;
+      > li {
+        padding: 5px;
+        border-radius: 5px;
+        &:hover {
+          background-color: $main-green-color;
+        }
+        > a {
+          text-decoration: none;
+          color: white;
+          font-size: 14px;
+        }
+      }
+      > li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &.show {
+      display: block;
+    }
+  }
+}
+@mixin basic-button-style($bgColor) {
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  margin-top: 15px;
+  background: $bgColor;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background-color: lighten($bgColor, 25%);
+  }
+}
+@mixin footer {
+  display: grid;
+  grid-template-areas: 'site tech';
+  margin-top: 50px;
+  background-color: black;
+  padding: 25px;
+  color: white;
+  font-family: 'Lora', serif;
+  > div:first-child {
+    grid-area: site;
+    > p {
+      color: $main-green-color;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    > ul {
+      list-style: none;
+      > li {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+    > p:last-child {
+      font-size: 16px;
+      color: $main-green-color;
+    }
+  }
+  > div:last-child {
+    grid-area: tech;
+    > p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: $main-green-color;
+    }
+    > ul {
+      list-style: none;
+      > li {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

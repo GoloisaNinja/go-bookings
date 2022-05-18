@@ -1,0 +1,107 @@
+{{template "base" .}}
+{{define "title"}}
+    Blueberry's Suite
+{{end}}
+{{define "css"}}
+    <link rel="stylesheet" href="../static/stylesheets/rooms.css" />
+{{end}}
+{{define "content"}}
+    <div class="container">
+        <section class="intro-grid">
+            <div class="img-container">
+                <img
+                        src="/static/images/blueberrys.webp"
+                        alt="a booking fit for a blueberry"
+                />
+            </div>
+            <div class="details-container">
+                <h1>Blueberry's Suite</h1>
+                <p class="details">
+                    Accommodation type: <span class="text-bold">Rustic Steel</span>
+                </p>
+                <p class="details">Max Occupancy: <span class="text-bold">4</span></p>
+                <p class="details">
+                    Pricing Tier: <span class="text-bold">Fruity</span>
+                </p>
+                <p class="details">
+                    Country: <span class="text-bold">Australia</span>
+                </p>
+                <p class="quick-notes">
+                    Named after our French Bulldog, Blueberry, this rustic yet beautiful
+                    getaway has lots of windows and glass walls. Perfect for a French
+                    Bulldog that loves to stare and spy like a level 12 creeper.
+                    Fireplaces and stainless steel throughout. This quiet booking is
+                    ideal for catching up on sleep, reading, and doggo snuggling.
+                </p>
+                <button class="btn-availability">check availability</button>
+            </div>
+        </section>
+        <section class="bottom-grid">
+            <div class="address">
+                <h2>Full Address & Ammenities</h2>
+                <ul class="ammenities">
+                    <li>124 Shakespeare Street, Mackay QLD 4740</li>
+                    <li>Pool & Spa</li>
+                    <li>Split Cycle AirCon</li>
+                    <li>Washer/Dryer</li>
+                    <li>Full Garden & Frog Fountain</li>
+                    <li>Patio with Barbeque</li>
+                    <li>Ceiling Fans Throughout</li>
+                    <li>Wired Ethernet & Fast Wifi</li>
+                    <li>Chef's Kitchen w/ Marble Benchtop</li>
+                    <li>1 Doggo Bedroom w/ 6 Orthopedic Beds</li>
+                </ul>
+            </div>
+            <div class="full-description">
+                <h2>Full Property Details</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+                    cupiditate inventore suscipit accusantium magnam modi aspernatur
+                    consequatur laborum impedit vel, qui quidem placeat maiores
+                    assumenda? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Autem ipsum placeat esse molestias vitae facilis architecto quis sit
+                    explicabo sapiente neque odit blanditiis totam quos quia, rerum
+                    impedit veniam sunt nam? Aliquid dolore sunt minus excepturi quod
+                    vero at doloribus velit. Nihil aspernatur accusantium delectus
+                    quasi, expedita obcaecati iusto. Magnam. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Est, quo veritatis placeat ipsam
+                    facilis, in reiciendis ea suscipit odio quaerat eaque illo assumenda
+                    velit, et doloremque? Incidunt assumenda pariatur tempore quibusdam
+                    expedita qui consectetur excepturi eligendi repellat, magnam dolore,
+                    eum officiis praesentium vitae facere fugiat quasi quis ipsam,
+                    maxime rem!
+                </p>
+            </div>
+        </section>
+        <section class="bottom-reviews">
+            <div class="review-intro">
+                <h2>What our Clients are Saying</h2>
+                <p>
+                    We love to hear about our client's experiences as they travel and
+                    create memories with their precious pets. If you have stayed in
+                    Millie's Quarters, please be sure to sign in, and leave a detailed
+                    review. Your thoughts and impressions will help others!
+                </p>
+                <button>leave a review</button>
+            </div>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="user-score">
+                        <h3>A lovely getaway!</h3>
+                        <h5>score <span class="score">9</span></h5>
+                    </div>
+                    <h5>by <span class="user">berniceBurmese</span></h5>
+                    <p>
+                        "We could not have had a better time at this booking! The house
+                        was immaculate and well cared for. The love that the owners put
+                        into the dog bedroom was just adorable. Our little cloud dogs
+                        loved having 6 beds to sleep in. They kept choosing different beds
+                        every night! The pool and patio area was beautiful and, I have to
+                        say, the frog fountain was my favourite! There were singing
+                        frogs!"
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+{{end}}

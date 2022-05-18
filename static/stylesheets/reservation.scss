@@ -1,0 +1,59 @@
+@import 'colors';
+@import 'utils';
+
+* {
+  @include reset;
+}
+
+.navbar {
+  @include navbar;
+}
+.footer {
+  @include footer;
+}
+.container {
+  @include container;
+}
+.reservation_container {
+  padding-top: 50px;
+  margin: 0 25px;
+  > h1 {
+    font-family: 'Lora', serif;
+  }
+}
+.form_container {
+  margin-top: 15px;
+  > form {
+    display: flex;
+    flex-direction: column;
+    > button {
+      font-family: 'Rubik', sans-serif;
+    }
+    .form-row {
+      display: flex;
+    }
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      width: 100%;
+      > input {
+        padding: 8px;
+      }
+      > label {
+        font-size: 14px;
+        color: $metallic-seaweed;
+      }
+      > input,
+      label {
+        font-family: 'Rubik', sans-serif;
+      }
+      > input:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+.btn-submit {
+  @include basic-button-style($main-green-color);
+}
