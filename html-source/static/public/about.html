@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/about.css" rel="stylesheet" type="text/css" />
+		<title>About</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="logo_container">
+				<a href="/static/public/"
+					><img
+						src="images/doggobookinglogo.webp"
+						alt="a lower case d and a lowercase b making the logo for doggo bookings"
+				/></a>
+			</div>
+			<ul>
+				<li>
+					<div class="dropdown-container">
+						<a href="#" id="roomLink">rooms</a>
+						<div id="dropdown-content">
+							<ul>
+								<li>
+									<a href="/static/public/rooms/millies-quarters.html"
+										>Millie's Quarters</a
+									>
+								</li>
+								<li>
+									<a href="static/public/rooms/blueberrys-suite.html"
+										>Blueberry's Suite</a
+									>
+								</li>
+								<li>
+									<a href="/static/public/rooms/muffins-retreat.html"
+										>Muffin's Retreat</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="/static/public/about.html">about</a></li>
+				<li>contact</li>
+			</ul>
+		</nav>
+		<div class="container">
+			<h1>About</h1>
+			<p>new</p>
+		</div>
+		<!-- START footer should be in base template -->
+		<footer class="footer">
+			<div>
+				<p>Site Links</p>
+				<ul>
+					<li>home</li>
+					<li>about</li>
+					<li>contact</li>
+				</ul>
+				<p>Doggo Bookings copyright <span id="date"></span></p>
+			</div>
+			<div>
+				<p>Built by Jon Collins</p>
+				<ul>
+					<li>Portfolio</li>
+					<li>Blog</li>
+					<li>Resume Game</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- END footer should be in base template -->
+	</body>
+	<script type="module" src="js/about.js"></script>
+</html>

@@ -4,6 +4,7 @@
 {{end}}
 {{define "css"}}
     <link rel="stylesheet" href="../static/stylesheets/rooms.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
 {{end}}
 {{define "content"}}
     <div class="container">
@@ -34,7 +35,7 @@
                     booking is also rated for up to 6 pets. This means you can bring ALL
                     your crews!
                 </p>
-                <button class="btn-availability">check availability</button>
+                <a id="btn-availability" href="#!" class="btn-availability">check availability</a>
             </div>
         </section>
         <section class="bottom-grid">
@@ -105,4 +106,36 @@
             </div>
         </section>
     </div>
+    <div id="modal" class="modal-container">
+        <div id="range-container" class="form-section">
+            <div class="modal-upper">
+                <p class="modal-text">Select desired stay period</p>
+                <button id="close-btn"><img src="/static/images/closeIcon.svg" alt="close icon"/></button>
+            </div>
+
+            <div class="form-row">
+                <label id="start" for="start">Starting Date</label>
+                <input id="end" type="text" name="start">
+            </div>
+            <div class="form-row">
+                <label id="end" for="end">Ending Date</label>
+                <input id="end" type="text" name="end">
+            </div>
+        </div>
+        <div>
+            <button class="btn-submit" type="submit">
+                check availability
+            </button>
+        </div>
+    </div>
+    <div id="overlay" class="overlay">
+    </div>
+{{end}}
+{{define "js"}}
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script>
+        const elem = document.getElementById("range-container");
+        const rangepicker = new DateRangePicker(elem);
+    </script>
+    <script src="/static/js/rooms.js" type="module"></script>
 {{end}}

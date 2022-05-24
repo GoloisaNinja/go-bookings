@@ -31,25 +31,34 @@
     }
     .form-row {
       display: flex;
+      flex-direction: column;
     }
     .form-section {
       display: flex;
       flex-direction: column;
-      margin-bottom: 25px;
       width: 100%;
-      > input {
-        padding: 8px;
+      .form-row {
+        width: 100%;
+        margin-bottom: 25px;
+        > input {
+          padding: 8px;
+        }
+        > label {
+          font-size: 14px;
+          color: $metallic-seaweed;
+        }
+        > input,
+        label {
+          font-family: 'Rubik', sans-serif;
+        }
+        > input:not(:last-child) {
+          margin-right: 25px;
+        }
+
       }
-      > label {
-        font-size: 14px;
-        color: $metallic-seaweed;
-      }
-      > input,
-      label {
-        font-family: 'Rubik', sans-serif;
-      }
-      > input:not(:last-child) {
-        margin-right: 25px;
+
+      @media (min-width: 600px) {
+        flex-direction: row;
       }
     }
   }

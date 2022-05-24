@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px 0px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  font-family: "Rubik", sans-serif;
+  background-color: black;
+}
+.navbar > div:first-child > a:first-child > img {
+  height: 50px;
+}
+.navbar > ul {
+  display: flex;
+  margin: 0;
+}
+.navbar > ul > li {
+  list-style: none;
+  color: white;
+  cursor: pointer;
+}
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+.navbar > ul > li:not(:last-child) {
+  margin-right: 25px;
+}
+.navbar .dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+.navbar .dropdown-container > a {
+  text-decoration: none;
+  color: white;
+}
+.navbar #dropdown-content {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 175px;
+  padding: 15px;
+  left: -30px;
+  display: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.navbar #dropdown-content > ul {
+  list-style: none;
+}
+.navbar #dropdown-content > ul > li {
+  padding: 5px;
+  border-radius: 5px;
+}
+.navbar #dropdown-content > ul > li:hover {
+  background-color: #3ca5b5;
+}
+.navbar #dropdown-content > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+.navbar #dropdown-content > ul > li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.navbar #dropdown-content.show {
+  display: block;
+}
+
+.footer {
+  display: grid;
+  grid-template-areas: "site tech";
+  margin-top: 50px;
+  background-color: black;
+  padding: 25px;
+  color: white;
+  font-family: "Lora", serif;
+}
+.footer > div:first-child {
+  grid-area: site;
+}
+.footer > div:first-child > p {
+  color: #3ca5b5;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.footer > div:first-child > ul {
+  list-style: none;
+}
+.footer > div:first-child > ul > li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer > div:first-child > p:last-child {
+  font-size: 16px;
+  color: #3ca5b5;
+}
+.footer > div:last-child {
+  grid-area: tech;
+}
+.footer > div:last-child > p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #3ca5b5;
+}
+.footer > div:last-child > ul {
+  list-style: none;
+}
+.footer > div:last-child > ul > li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=about.css.map */

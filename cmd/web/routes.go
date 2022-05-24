@@ -24,6 +24,7 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Get("/millies-quarters", handlers.Repo.Millies)
 	mux.Get("/blueberrys-suite", handlers.Repo.Blueberrys)
 	mux.Get("/muffins-retreat", handlers.Repo.Muffins)
+	mux.Get("/search-availability", handlers.Repo.Availability)
 	// load the css
 	fileServer := http.FileServer(http.Dir("static"))
 	mux.Handle("/static/*", http.StripPrefix("/static/", fileServer))

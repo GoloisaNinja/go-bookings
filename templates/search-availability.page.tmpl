@@ -1,0 +1,41 @@
+{{template "base" .}}
+{{define "css"}}
+    <link rel="stylesheet" href="../static/stylesheets/reservation.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+{{end}}
+{{define "title"}}
+    Search Availability
+{{end}}
+{{define "content"}}
+    <div class="container">
+        <div class="reservation_container">
+            <h1>Search for Booking Availability</h1>
+            <div class="form_container">
+                <form action="search-availability.html" method="GET">
+                    <div id="range-container" class="form-section">
+                        <div class="form-row">
+                            <label id="start" for="start">Starting Date</label>
+                            <input id="end" type="text" name="start">
+                        </div>
+                        <div class="form-row">
+                            <label id="end" for="end">Ending Date</label>
+                            <input id="end" type="text" name="end">
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn-submit" type="submit">
+                            check availability
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{{end}}
+{{define "js"}}
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+        <script>
+            const elem = document.getElementById("range-container");
+            const rangepicker = new DateRangePicker(elem);
+        </script>
+{{end}}

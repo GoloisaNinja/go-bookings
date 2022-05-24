@@ -1,7 +1,24 @@
-import { expandRooms, setCurrentDate } from './utils.js';
+const overlay = document.getElementById('overlay');
+const modal = document.getElementById('modal');
+const checkAvailBtn = document.getElementById('btn-availability');
+const closeModalBtn = document.getElementById('close-btn');
 
-setCurrentDate();
+const handleModal = (show) => {
+	if (show) {
+		overlay.classList.add('show');
+		modal.classList.add('show');
+	} else {
+		overlay.classList.remove('show');
+		modal.classList.remove('show');
+	}
+}
 
-document.getElementById('roomLink').addEventListener('click', () => {
-	expandRooms();
-});
+checkAvailBtn.addEventListener('click', () => {
+	handleModal(true);
+})
+overlay.addEventListener('click', () => {
+	handleModal();
+})
+closeModalBtn.addEventListener('click', () => {
+	handleModal();
+})

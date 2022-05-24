@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<title>Bookings.io Home</title>
+	</head>
+	<body>
+		<!-- START navbar should be in the base template -->
+		<nav class="navbar">
+			<div class="logo_container">
+				<a href="/static/public/"
+					><img src="images/doggobookinglogo.webp" name="logo"
+				/></a>
+			</div>
+
+			<ul>
+				<li>
+					<div class="dropdown-container">
+						<a href="#" id="roomLink">rooms</a>
+						<div id="dropdown-content">
+							<ul>
+								<li>
+									<a href="/static/public/rooms/millies-quarters.html"
+										>Millie's Quarters</a
+									>
+								</li>
+								<li>
+									<a href="/static/public/rooms/blueberrys-suite.html"
+										>Blueberry's Suite</a
+									>
+								</li>
+								<li>
+									<a href="/static/public/rooms/muffins-retreat.html"
+										>Muffin's Retreat</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href="/static/public/about.html">about</a></li>
+				<li>contact</li>
+			</ul>
+		</nav>
+		<!-- END navbar should be in the base template -->
+		<!-- START this content will be index/home template specific -->
+		<div class="container">
+			<section class="image-carousel">
+				<div class="img-container">
+					<img class="fade" src="images/c1.webp" name="c1" />
+					<div>
+						<h1>Doggo Bookings</h1>
+						<p>Because it's not a getaway without a doggo</p>
+					</div>
+					<div class="overlay"></div>
+				</div>
+				<div class="img-container">
+					<img class="fade" src="images/c2.webp" name="c1" />
+					<div>
+						<h1>Comfy and Posh</h1>
+						<p>We don't sacrifice elegance or comfort</p>
+					</div>
+					<div class="overlay"></div>
+				</div>
+				<div class="img-container">
+					<img class="fade" src="images/c3.webp" name="c1" />
+					<div>
+						<h1>Uniquely Beautiful</h1>
+						<p>Every location is a stunningly exquisite experience</p>
+					</div>
+					<div class="overlay"></div>
+				</div>
+				<div class="img-controls">
+					<span class="rect" data-position="1"></span>
+					<span class="rect" data-position="2"></span>
+					<span class="rect" data-position="3"></span>
+				</div>
+			</section>
+			<section class="intro">
+				<h2>Welcome to Doggo Bookings</h2>
+				<p>
+					Travelling with your pet can be stressful. Travelling without your
+					pet, well that's just not an option. At Doggo Bookings we wanted to
+					combine luxury, comfort, elegance, and fun - all with your treasured
+					family memeber in mind. We provide bookings to exclusive locations
+					around the globe. Additionally, we can enhance your stay with
+					pre-arranged activities that are sure to please both you and your
+					furry friends. Browse our rooms and make your reservations today!
+				</p>
+			</section>
+			<section class="offerings">
+				<h2>What sets us apart?</h2>
+				<div class="feature-grid">
+					<div class="feature-card">
+						<h3>Fast. Reliable. Secure.</h3>
+						<p>
+							With Doggo Bookings your next holiday is only a few clicks away.
+							Our booking system is fast because it should be simple to book
+							your next great adventure. Our system is also built to be reliable
+							and secure. Get the room and experience you want, without any
+							worries over your privacy.
+						</p>
+						<button>Learn More</button>
+					</div>
+					<div class="feature-card">
+						<h3>Dogs. Dogs. More Dogs.</h3>
+						<p>
+							Your next holiday is a precious memory waiting to be made. Each
+							Doggo Booking room is 100% pet friendly, and in fact, has been
+							carefully created and decorated to give your four-legged family
+							members the best possible experience. Doggo Bookings is committed
+							to making sure both you and your pet won't ever want to leave!
+						</p>
+						<button>Make a Reservation</button>
+					</div>
+					<div class="feature-card">
+						<h3>Itinerary Assistance.</h3>
+						<p>
+							Planning pet appropriate special events or outings during your
+							stay can be exhausting. Our expert booking coordinators can help
+							you create a custom itinerary for both you and your furry friends.
+							From pet friendly dining experiences to our rich pet inclusive
+							spas, assistance plans are just a special email request away.
+						</p>
+						<button>Get in Touch</button>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- END this content will be index/home template specific -->
+		<!-- START footer should be in base template -->
+		<footer class="footer">
+			<div>
+				<p>Site Links</p>
+				<ul>
+					<li>home</li>
+					<li>about</li>
+					<li>contact</li>
+				</ul>
+				<p>Doggo Bookings copyright <span id="date"></span></p>
+			</div>
+			<div>
+				<p>Built by Jon Collins</p>
+				<ul>
+					<li>Portfolio</li>
+					<li>Blog</li>
+					<li>Resume Game</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- END footer should be in base template -->
+	</body>
+	<script src="js/index.js" type="module"></script>
+	<script>
+		const altImageTexts = {
+			logo: 'Doggo Bookings Logo',
+			c1: 'A cute pug wrapped up in a cozy blanket looking very cute',
+			c2: 'A sleepy golden retriever snuggled up on a cozy bed',
+			c3: 'A woman holding a large mug of hot chocolate with a lovely little puppy at her feet',
+		};
+		function setAltText() {
+			const images = document.querySelectorAll('img');
+			for (let i = 0; i < images.length; i++) {
+				images[i].setAttribute('alt', altImageTexts[images[i].name]);
+			}
+		}
+		setAltText();
+	</script>
+</html>

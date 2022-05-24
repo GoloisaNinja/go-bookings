@@ -91,6 +91,7 @@
 @mixin basic-button-style($bgColor) {
   background: none;
   border: none;
+  text-decoration: none;
   padding: 8px 10px;
   margin-top: 15px;
   background: $bgColor;

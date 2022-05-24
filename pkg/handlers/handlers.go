@@ -50,3 +50,6 @@ func (e *Repository) Blueberrys(w http.ResponseWriter, r *http.Request) {
 func (e *Repository) Muffins(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, "muffins-retreat.page.tmpl", &models.TemplateData{})
 }
+func (e *Repository) Availability(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, "search-availability.page.tmpl", &models.TemplateData{})
+}
